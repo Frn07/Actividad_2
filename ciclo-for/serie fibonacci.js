@@ -1,9 +1,13 @@
-let f = [0,1,1,2]; 
-for( let i=4; i<11; i++){
+let N = 10;
+let a = 0;
+let b = 1;
+let resultado = "";
 
-    f[i] = f[i - 1] + f[i - 2];
+for (let i = 0; i < N; i++) {
+    resultado += a + ", ";
+    let temp = a + b;
+    a = b;
+    b = temp;
 }
-{
-console.log(f);
 
-}
+console.log(resultado.slice(0, -2));
